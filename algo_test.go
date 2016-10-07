@@ -16,7 +16,7 @@ func TestSearchSuccess(t *testing.T) {
 	for _, test := range tests {
 		res := Search(test.list, test.value)
 		if res != test.result {
-			t.Error("Error for list %v and value %d; result expected %s", test.list, test.value, test.result)
+			t.Errorf("Error for list %v and value %d; result expected %t", test.list, test.value, test.result)
 		}
 	}
 }
